@@ -21,5 +21,5 @@ if (screen.width >= 1440 && screen.width < 1790) {
 setTimeout( function() {
     document.querySelectorAll('.image-container')[imgCont.length -1].style.left = '1050px';
     document.querySelectorAll('.image-container')[imgCont.length -1].style.top = '998px';
-}, 500)
+}, 400)
 }
