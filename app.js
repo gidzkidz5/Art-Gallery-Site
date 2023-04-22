@@ -139,39 +139,6 @@ imgCont.forEach(image => image.addEventListener('click', (e) => {
     enableSlideshow();
 }))
 
-// imgTextCont.forEach(image => image.addEventListener('click', (e) => {
-//     // find index of clicked image
-
-//     // let nextArt = document.querySelectorAll('.image-text')[index].querySelector('h2').innerText
-
-//     //enable correct slideshow()
-//     let currentArt = e.target.querySelector('h2').innerText;
-//     console.log('currentArt: ', currentArt)
-
-//     dataLoad = data.find(object => object.name === currentArt);
-//     console.log(dataLoad);
-
-//     index = dataLoad.number;
-//     changeData(dataLoad, index);
-
-//     enableSlideshow();
-//     // console.log(currentArt);
-//     // console.log('image-container was clicked');
-
-// }))
-
-
-
-
-
-
-
-
-
-
-
-
-
 // view image button
 const lightbox = document.createElement('div');
 lightbox.id = 'lightbox2';

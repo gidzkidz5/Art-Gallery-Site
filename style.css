@@ -239,11 +239,11 @@ header
 
 /*  Overlay  */
 .hide {
-    visibility: none;
+    visibility: hidden ;
     display: none;
 }
 
-#overlay {
+#overlay:not(.hide) {
     /* width: 100vw; */
     position: fixed;
     z-index: 100000;
@@ -251,6 +251,10 @@ header
     background-color: white;
     height: 100vh;
     max-width: calc(100vw - 5rem);
+    
+    display: flex;
+    flex-direction: column;
+   
 }
 
 #overlay header {
@@ -305,6 +309,10 @@ header
 
 #source p {
     text-decoration-color: hsl(var(--clr-darkgray));
+}
+
+#source:hover {
+    opacity: 0.5;
 }
 
 @media only screen and (min-width: 35em) {
@@ -384,6 +392,12 @@ footer {
 .footer-btn{
     gap: 23.5px;
 }
+
+#lightbox {
+    flex-direction: column;
+}
+
+
 }
 
 .footer-btn svg {
