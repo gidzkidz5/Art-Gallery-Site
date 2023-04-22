@@ -15,7 +15,8 @@
         "large": "./assets/starry-night/hero-large.jpg"
       },
       "gallery": "./assets/starry-night/gallery.jpg"
-    }
+    },
+    "number": 1
   },
   {
     "name": "Girl with a Pearl Earring",
@@ -33,7 +34,8 @@
         "large": "./assets/girl-with-pearl-earring/hero-large.jpg"
       },
       "gallery": "./assets/girl-with-pearl-earring/gallery.jpg"
-    }
+    },
+    "number": 2
   },
   {
     "name": "Guernica",
@@ -51,7 +53,8 @@
         "large": "./assets/guernica/hero-large.jpg"
       },
       "gallery": "./assets/guernica/gallery.jpg"
-    }
+    },
+    "number": 3
   },
   {
     "name": "Penitent Magdalene",
@@ -69,7 +72,8 @@
         "large": "./assets/penitent-magdalene/hero-large.jpg"
       },
       "gallery": "./assets/penitent-magdalene/gallery.jpg"
-    }
+    },
+    "number": 4
   },
   {
     "name": "The Storm on the Sea of Galilee",
@@ -87,7 +91,8 @@
         "large": "./assets/the-storm-on-the-sea-of-galilee/hero-large.jpg"
       },
       "gallery": "./assets/the-storm-on-the-sea-of-galilee/gallery.jpg"
-    }
+    },
+    "number": 5
   },
   {
     "name": "The Great Wave off Kanagawa",
@@ -105,7 +110,8 @@
         "large": "./assets/the-great-wave-off-kanagawa/hero-large.jpg"
       },
       "gallery": "./assets/the-great-wave-off-kanagawa/gallery.jpg"
-    }
+    },
+    "number": 6
   },
   {
     "name": "Van Gogh Self-portrait",
@@ -123,7 +129,8 @@
         "large": "./assets/van-gogh-self-portrait/hero-large.jpg"
       },
       "gallery": "./assets/van-gogh-self-portrait/gallery.jpg"
-    }
+    },
+    "number": 7
   },
   {
     "name": "The Sleeping Gypsy",
@@ -141,7 +148,8 @@
         "large": "./assets/the-sleeping-gypsy/hero-large.jpg"
       },
       "gallery": "./assets/the-sleeping-gypsy/gallery.jpg"
-    }
+    },
+    "number": 8
   },
   {
     "name": "Lady with an Ermine",
@@ -159,7 +167,8 @@
         "large": "./assets/lady-with-an-ermine/hero-large.jpg"
       },
       "gallery": "./assets/lady-with-an-ermine/gallery.jpg"
-    }
+    },
+    "number": 9
   },
   {
     "name": "The Night Café",
@@ -177,7 +186,8 @@
         "large": "./assets/the-night-cafe/hero-large.jpg"
       },
       "gallery": "./assets/the-night-cafe/gallery.jpg"
-    }
+    },
+    "number": 10
   },
   {
     "name": "The Basket of Apples",
@@ -195,7 +205,8 @@
         "large": "./assets/the-basket-of-apples/hero-large.jpg"
       },
       "gallery": "./assets/the-basket-of-apples/gallery.jpg"
-    }
+    },
+    "number": 12
   },
   {
     "name": "The Boy in the Red Vest",
@@ -213,7 +224,8 @@
         "large": "./assets/the-boy-in-the-red-vest/hero-large.jpg"
       },
       "gallery": "./assets/the-boy-in-the-red-vest/gallery.jpg"
-    }
+    },
+    "number": 13
   },
   {
     "name": "Arnolfini Portrait",
@@ -231,7 +243,8 @@
         "large": "./assets/arnolfini-portrait/hero-large.jpg"
       },
       "gallery": "./assets/arnolfini-portrait/gallery.jpg"
-    }
+    },
+    "number": 14
   },
   {
     "name": "Mona Lisa",
@@ -249,7 +262,8 @@
         "large": "./assets/mona-lisa/hero-large.jpg"
       },
       "gallery": "./assets/mona-lisa/gallery.jpg"
-    }
+    },
+    "number": 11
   },
   {
     "name": "The Swing",
@@ -267,6 +281,7 @@
         "large": "./assets/the-swing/hero-large.jpg"
       },
       "gallery": "./assets/the-swing/gallery.jpg"
-    }
+    },
+    "number": 15
   }
 ]

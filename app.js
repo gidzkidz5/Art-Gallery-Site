@@ -4,8 +4,7 @@ const slideshowBtn2 = document.getElementById('stop-slideshow');
 const overlay = document.getElementById('overlay');
 
 slideshowBtn1.addEventListener('click' , () => {
-    overlay.classList.toggle('hide');
-    document.body.style.overflow = 'hidden';
+    enableSlideshow();
 })
 
 slideshowBtn2.addEventListener('click' , () => {
@@ -13,10 +12,15 @@ slideshowBtn2.addEventListener('click' , () => {
     document.body.style.overflow = 'auto';
 })
 
-
+function enableSlideshow() {
+    overlay.classList.toggle('hide');
+    document.body.style.overflow = 'hidden';
+}
 // using json to update overlay on button click
 const nameArt = document.querySelector('.lightbox-text').querySelector('h1');
 const artistName = document.querySelector('.lightbox-text').querySelector('p');
+const nameArt2 = document.querySelector('.footer-text').querySelector('h1');
+const artistName2 = document.querySelector('.footer-text').querySelector('p');
 const year = document.getElementById('year');
 const descText = document.getElementById('description-text').querySelector('p');
 const source = document.getElementById('source');
@@ -25,6 +29,9 @@ const artistImg = document.getElementById('artist-slideshow');
 
 // document.querySelectorAll('.image-text')[0].querySelector('h2').text
 
+const bar1 = document.getElementById('progress-bar');
+const bar2 = document.getElementById('remainding-bar');
+
 const nextBtn = document.getElementById('next');
 const prevBtn = document.getElementById('prev');
 
@@ -32,15 +39,6 @@ const prevBtn = document.getElementById('prev');
 
 document.onreadystatechange = () => {
 if (document.readyState === "complete") {
-
-
-
-
-
-
-
-
-
 
 fetch('data.json')
   .then(response => response.json())
@@ -60,6 +58,23 @@ function updateData(data) {
 
 let index = 0;
 
+// function for changing data in slideshow
+function changeData(data, index) {
+    nameArt.innerHTML = data.name;
+    artistName.innerHTML = data.artist.name;
+    nameArt2.innerHTML = data.name;
+    artistName2.innerHTML = data.artist.name;
+    year.innerHTML = data.year;
+    descText.innerHTML = data.description;
+    source.href = data.source;
+    artImg.src = data.images.hero.large;
+    artistImg.src = data.artist.image;
+
+    let bar = (100/document.querySelector('main').children.length) * (index+1);
+
+    document.documentElement.style.setProperty('--barWidth1', bar + '%');
+}
+
     // add button event listener
 nextBtn.addEventListener('click', ()=>{
 
@@ -68,17 +83,17 @@ nextBtn.addEventListener('click', ()=>{
     if (index >= document.querySelector('main').children.length){
         index = 0;
     }
-     let nextArt = document.querySelectorAll('.image-text')[index].querySelector('h2').innerText
+    // let bar = (100/document.querySelector('main').children.length) * (index+1);
 
-    dataLoad = data.find(object => object.name === nextArt)
-    nameArt.innerHTML = dataLoad.name;
-    artistName.innerHTML = dataLoad.artist.name;
-    year.innerHTML = dataLoad.year;
-    descText.innerHTML = dataLoad.description;
-    source.src = dataLoad.source;
-    artImg.src = dataLoad.images.hero.large;
-    artistImg.src = dataLoad.artist.image;
- 
+   
+
+    dataLoad = data.find(object => object.number === index+1);
+
+    changeData(dataLoad, index)
+
+   
+    
+
 })
 
 prevBtn.addEventListener('click', ()=>{
@@ -87,18 +102,75 @@ prevBtn.addEventListener('click', ()=>{
     index--;
     if (index < 0){
         index = document.querySelector('main').children.length - 1;
-    }
-     let nextArt = document.querySelectorAll('.image-text')[index].querySelector('h2').innerText
+    };
 
-    dataLoad = data.find(object => object.name === nextArt)
-    nameArt.innerHTML = dataLoad.name;
-    artistName.innerHTML = dataLoad.artist.name;
-    year.innerHTML = dataLoad.year;
-    descText.innerHTML = dataLoad.description;
-    source.src = dataLoad.source;
-    artImg.src = dataLoad.images.hero.large;
-    artistImg.src = dataLoad.artist.image;
+    let bar = (100/document.querySelector('main').children.length) * (index+1);
+     
+
+    dataLoad = data.find(object => object.number === index+1)
+    
+    changeData(dataLoad, index);
+
+    
 })
+
+// main gallery image click to enable slideshow
+const imgCont = document.querySelectorAll('.image-container');
+const imgTextCont = document.querySelectorAll('.image-text');
+
+// console.log(imgCont[1]).querySelectorAll(':scope');
+
+imgCont.forEach(image => image.addEventListener('click', (e) => {
+    // imgTextCont.dispatchEvent(new Event('click'));
+    // let currentArt = e.target.parentNode
+    // .querySelector('.image-text')
+    // .querySelector('h2').innerText;
+
+    let currentArt = e.target.closest('.image-container')
+    .querySelector('.image-text')
+    .querySelector('h2').innerText;
+    
+    dataLoad = data.find(object => object.name=== currentArt);
+
+    index = dataLoad.number;
+
+    changeData(dataLoad, index);
+
+    enableSlideshow();
+}))
+
+// imgTextCont.forEach(image => image.addEventListener('click', (e) => {
+//     // find index of clicked image
+
+//     // let nextArt = document.querySelectorAll('.image-text')[index].querySelector('h2').innerText
+
+//     //enable correct slideshow()
+//     let currentArt = e.target.querySelector('h2').innerText;
+//     console.log('currentArt: ', currentArt)
+
+//     dataLoad = data.find(object => object.name === currentArt);
+//     console.log(dataLoad);
+
+//     index = dataLoad.number;
+//     changeData(dataLoad, index);
+
+//     enableSlideshow();
+//     // console.log(currentArt);
+//     // console.log('image-container was clicked');
+
+// }))
+
+
+
+
+
+
+
+
+
+
+
+
 
 // view image button
 const lightbox = document.createElement('div');

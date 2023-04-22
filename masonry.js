@@ -15,7 +15,6 @@ window.onload = () => {
 
 let imgCont = document.querySelectorAll('.image-container');
 
-
 if (screen.width >= 1440) {
 setTimeout( function() {
     document.querySelectorAll('.image-container')[imgCont.length -1].style.left = '1050px';
@@ -31,9 +30,3 @@ if (screen.width >= 767 && screen.width < 810) {
     
     }, 100)
 }
-
-imgCont.forEach(image => image.addEventListener('hover', () => {
-    image.style.opacity = '0.5';
-    image.style.cursor = 'pointer';
-}))
-
