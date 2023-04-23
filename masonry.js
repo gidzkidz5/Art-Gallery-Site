@@ -15,12 +15,14 @@ window.onload = () => {
 
 let imgCont = document.querySelectorAll('.image-container');
 
+
+
 if (screen.width >= 1440) {
 setTimeout( function() {
     document.querySelectorAll('.image-container')[imgCont.length -1].style.left = '1050px';
     document.querySelectorAll('.image-container')[imgCont.length -1].style.top = '998px';
 
-}, 100)
+}, 250)
 }
 
 if (screen.width >= 767 && screen.width < 810) {
@@ -28,5 +30,5 @@ if (screen.width >= 767 && screen.width < 810) {
         document.querySelectorAll('.image-container')[imgCont.length -1].style.left = '364px';
         document.querySelectorAll('.image-container')[imgCont.length -1].style.top = '2459px';
     
-    }, 100)
+    }, 250)
 }

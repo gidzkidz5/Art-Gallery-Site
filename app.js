@@ -78,34 +78,23 @@ function changeData(data, index) {
     // add button event listener
 nextBtn.addEventListener('click', ()=>{
 
-    // update text and images
     index++;
     if (index >= document.querySelector('main').children.length){
         index = 0;
     }
-    // let bar = (100/document.querySelector('main').children.length) * (index+1);
-
-   
 
     dataLoad = data.find(object => object.number === index+1);
 
     changeData(dataLoad, index)
 
-   
-    
-
 })
 
 prevBtn.addEventListener('click', ()=>{
 
-    // update text and images
     index--;
     if (index < 0){
         index = document.querySelector('main').children.length - 1;
     };
-
-    let bar = (100/document.querySelector('main').children.length) * (index+1);
-     
 
     dataLoad = data.find(object => object.number === index+1)
     
