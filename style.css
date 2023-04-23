@@ -12,7 +12,8 @@ h5,
 p,
 ul,
 figure,
-picture {
+picture,
+body {
     margin: 0; 
     padding: 0;
 }
