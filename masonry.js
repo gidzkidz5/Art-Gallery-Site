@@ -22,7 +22,7 @@ setTimeout( function() {
     document.querySelectorAll('.image-container')[imgCont.length -1].style.left = '1050px';
     document.querySelectorAll('.image-container')[imgCont.length -1].style.top = '998px';
 
-}, 250)
+}, 550)
 }
 
 if (screen.width >= 767 && screen.width < 810) {
@@ -30,5 +30,5 @@ if (screen.width >= 767 && screen.width < 810) {
         document.querySelectorAll('.image-container')[imgCont.length -1].style.left = '364px';
         document.querySelectorAll('.image-container')[imgCont.length -1].style.top = '2459px';
     
-    }, 250)
+    }, 550)
 }
