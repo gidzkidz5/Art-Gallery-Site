@@ -19,7 +19,7 @@ body {
 }
 
 #body {
-    margin-inline:calc( 2.5rem - 1px);
+    margin-inline:calc( 2.5rem - 2px);
     margin-top: 2.5rem;
     font-family: var(--ff-serif);
     justify-content: center;
@@ -251,7 +251,7 @@ header
     top: 0;
     background-color: white;
     height: 100vh;
-    max-width: calc(100vw - 5rem + 2px);
+    max-width: calc(100vw - 5rem + 4px);
     
     display: flex;
     flex-direction: column;
