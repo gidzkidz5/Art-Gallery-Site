@@ -164,7 +164,7 @@ let imgCont = document.querySelectorAll('.image-container');
 
 
 setTimeout( function() {
-if (screen.width >= 1400) {
+if (screen.width >= 1430) {
 // setTimeout( function() {
     document.querySelectorAll('.image-container')[imgCont.length -1].style.left = '1050px';
     document.querySelectorAll('.image-container')[imgCont.length -1].style.top = '1000px';
