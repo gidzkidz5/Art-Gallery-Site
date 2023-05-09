@@ -170,7 +170,7 @@ if (screen.width >= 1430) {
     document.querySelectorAll('.image-container')[imgCont.length -1].style.top = '1000px';
 
 // }, 500)
-}}, 5000)
+}}, 2500)
 
 if (screen.width >= 767 && screen.width < 810) {
     setTimeout( function() {
